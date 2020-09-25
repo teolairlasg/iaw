@@ -1,0 +1,49 @@
+*{
+    font-family: sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+#enlace1 {
+    background-color: lightcoral;
+}
+#enlace1:hover {
+    color: lightcoral;
+}
+#enlace2 {
+    background-color: aqua;
+}   
+#enlace2:hover {
+    color: aqua;
+}
+#enlace3 {
+    background-color: lightgreen;
+}
+#enlace3:hover {
+    color: lightgreen;
+}
+
+#barra_enlaces{
+    text-align: center;
+}
+
+#barra_enlaces a{
+    display: inline-block;  
+    width: 20%;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding: 5px;
+}
+
+video{
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+#barra_enlaces a:hover{
+    background-color: black;
+}
