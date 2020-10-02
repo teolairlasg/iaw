@@ -1,0 +1,31 @@
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 15px;
+    row-gap: 10px;
+}
+
+div:nth-child(even){
+    background-color: tomato;
+}
+
+div:nth-child(odd){
+    background-color: yellowgreen;
+}
+
+div:nth-child(2){
+    background-color: yellow;
+    border: 3px solid black;
+}
+
+#div6{
+    grid-row: 2 / 4;
+    grid-column: 2 /3;
+}
+
+#div1{
+    background-color: violet;
+    grid-column: 2 / 3;
+    grid-row: 3 / 5;
+}
+
