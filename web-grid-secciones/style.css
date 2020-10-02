@@ -1,3 +1,114 @@
-div#contenedor{
+body {
+    margin: 0;
+}
+
+/* Esto es para móvil */
+div#contenedor {
     display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+    height: 100vh;
+    grid-template-rows: 120px auto auto auto 60px;
+}
+header, aside, main, footer {
+    background-color: cornsilk;
+}
+main {
+    padding: 5px 10px;
+}
+
+/* Esto es para tablet */
+@media screen and (min-width: 600px){
+    div#contenedor {
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        gap: 5px;
+        height: 100vh;
+        grid-template-rows: 120px auto auto 60px;
+    }
+    header, aside, main, footer {
+        background-color: rgb(220, 236, 255);
+    }
+    header {
+        grid-column: 1/-1;
+    }
+    main {
+        padding: 5px 10px;
+        grid-column: 2/3;
+    }
+    aside#panel1 {
+        grid-column: 1/2;
+        grid-row: 2/ span 3;
+    }
+    aside#panel2 {
+        grid-column: 2/3;
+    }
+    footer {
+        grid-column: 2/3;
+    }
+}
+
+/* Esto es para pantallas de escritorio */
+@media screen and (min-width: 768px) {
+    div#contenedor {
+        display: grid;
+        grid-template-columns: 1fr 4fr 1fr;
+        gap: 5px;
+        height: 100vh;
+        grid-template-rows: 120px auto 60px;
+    }
+    header, aside, main, footer {
+        background-color: rgb(255, 227, 220);
+    }
+    header {
+        grid-column: 1/-1;
+    }
+    main {
+        padding: 5px 10px;
+        grid-column: 2/3;
+    }
+    aside#panel1 {
+        grid-column: 1/2;
+        grid-row: 2/ span 2;
+    }
+    aside#panel2 {
+        grid-column: 3/4;
+    }
+    footer {
+        grid-column: 2/4;
+    }
+
+}
+@media screen and (min-width: 1000px) {
+    div#contenedor {
+        display: grid;
+        grid-template-columns: 1fr 4fr 1fr;
+        gap: 5px;
+        height: 100vh;
+        grid-template-rows: 120px auto 60px;
+    }
+    header, aside, main, footer {
+        background-color: rgb(255, 227, 220);
+    }
+    header {
+        grid-column: 1/-1;
+    }
+    main {
+        padding: 5px 10px;
+        grid-column: 2/3;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    aside#panel1 {
+        grid-column: 1/2;
+        grid-row: 2/ span 2;
+    }
+    aside#panel2 {
+        grid-column: 3/4;
+    }
+    footer {
+        grid-column: 2/4;
+    }
+
 }

@@ -1,6 +1,6 @@
 main{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     column-gap: 15px;
     row-gap: 10px;
 }
@@ -13,19 +13,21 @@ div:nth-child(odd){
     background-color: yellowgreen;
 }
 
-div:nth-child(2){
+#div2{
     background-color: yellow;
-    border: 3px solid black;
+    border: 5px solid black;
+    padding: 2px;
 }
 
 #div6{
     grid-row: 2 / 4;
-    grid-column: 2 /3;
+    grid-column: 2 / 4;
+    /* grid-column: 2 / span 2; */
 }
 
 #div1{
     background-color: violet;
-    grid-column: 2 / 3;
-    grid-row: 3 / 5;
+    /* grid-row: 3 / 5; */
+    grid-row: 3 / span 3;
 }
 
