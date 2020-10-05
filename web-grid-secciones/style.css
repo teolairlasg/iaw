@@ -13,12 +13,17 @@ div#contenedor {
 header, aside, main, footer {
     background-color: cornsilk;
 }
+
+main h1{
+    background-color: lightgrey;
+}
+
 main {
     padding: 5px 10px;
 }
 
 /* Esto es para tablet */
-@media screen and (min-width: 600px){
+@media (min-width: 600px){
     div#contenedor {
         display: grid;
         grid-template-columns: 1fr 5fr;
@@ -49,7 +54,7 @@ main {
 }
 
 /* Esto es para pantallas de escritorio */
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
     div#contenedor {
         display: grid;
         grid-template-columns: 1fr 4fr 1fr;
@@ -79,7 +84,7 @@ main {
     }
 
 }
-@media screen and (min-width: 1000px) {
+@media (min-width: 1000px) {
     div#contenedor {
         display: grid;
         grid-template-columns: 1fr 4fr 1fr;
@@ -98,6 +103,11 @@ main {
         grid-column: 2/3;
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+
+    main h1{
+        grid-column: 1/-1;
+        /* height: min-content; */
     }
 
     aside#panel1 {
