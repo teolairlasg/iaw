@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: lightsalmon;
+}
+
+header{
+    background-color: lightseagreen;
+    position: fixed;
+    height: 60px;
+    width: 20%;
+    left: 0;
+}
+
+nav{
+    background-color: gray;
+    position: fixed;
+    top: 0;
+    height: 30px;
+    width: 80%;
+    right: 0;
+    z-index: 1;
+}
+
+aside{
+    background-color: lightyellow;
+    position: fixed;
+    top: 60px;
+    width: 20%;
+    height: 100vh;
+    overflow: auto;
+}
+
+main{
+    background-color: lightskyblue;
+    position: absolute;
+    right: 0;
+    top: 30px;
+    width: 80%;
+    min-height: calc(100vh - 40px - 30px - 25px);
+    padding-bottom: 25px;
+}
+
+footer{
+    background-color: gray;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 25px;
+}
