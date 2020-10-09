@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0 1%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* Esto es equivalente */
+    /* flex-flow: row wrap; */
+    align-content: flex-start;
+    height: 100vh;
+}
+
+body>* {
+    flex-basis: 100%;
+}
+
+#aside2 {
+    order: 1;
+}
+
+footer {
+    order: 2;
+}
+
+article {
+    padding: 5px;
+    background-color: rgb(255, 255, 219);
+    margin: 5px 1%;
+    border-radius: 20px;
+}
+
+/* Tablet */
+
+@media (min-width: 600px) {
+    aside {
+        flex-basis: 50%;
+    }
+    /* Devolvemos al aside a su posición natural */
+    #aside2 {
+        order: 0;
+    }
+    article {
+        padding: 10px;
+    }
+}
+
+/* Desktop */
+
+@media (min-width: 1000px) {
+    main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    /* Hay un 1% de margen por 
+    cada lado de los articles 1+48+1+1+48+1=100*/
+    article {
+        flex-basis: 48%;
+    }
+    article {
+        padding: 15px;
+    }
+}
+
+/* Desktop wide */
+
+@media (min-width: 1200px) {
+    main {
+        flex-basis: 80%;
+        order: 1;
+    }
+    #aside2 {
+        flex-basis: 100%;
+    }
+    #aside1 {
+        flex-basis: 20%;
+        order: 1;
+    }
+    article {
+        flex-basis: 48%;
+    }
+    article {
+        padding: 15px;
+    }
+}

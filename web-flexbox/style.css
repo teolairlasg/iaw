@@ -1,0 +1,23 @@
+#contenedor{
+    display: flex;
+    background-color: greenyellow;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 180px;
+}
+
+#div1{
+    font-size: 2em;
+    align-self: flex-end;
+    flex-basis: 100%;
+}
+
+div{
+    background-color: lightyellow;
+}
+
+#div5{
+    align-self: center;
+}
