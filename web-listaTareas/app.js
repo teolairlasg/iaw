@@ -5,11 +5,14 @@ function agregarTarea() {
         let liTarea = document.createElement("li");
         let liTexto = document.createElement("span");
         let papelera = document.createElement("img");
+        let lapiz = document.createElement("img");
+        lapiz.src = "./img/lapiz.svg";
         papelera.src = "./img/trash.svg";
-        papelera.className="papelera";
         papelera.addEventListener("click",borrarEstaTarea);
+        lapiz.addEventListener("click",editarEstaTarea);
         liTexto.innerHTML = tarea.value;
         liTarea.appendChild(liTexto);
+        liTarea.appendChild(lapiz);
         liTarea.appendChild(papelera);
         lista.appendChild(liTarea);
         tarea.value = "";
@@ -17,10 +20,16 @@ function agregarTarea() {
     tarea.focus();
 }
 
-function borrarEstaTarea(evento) {
-    evento.target.parentElement.remove();
+function editarEstaTarea(evento) {
+    let valorDevuelto = prompt("Escribe el nuevo valor:",event.target.parentElement.children[0].innerHTML);
+    evento.target.parentElement.children[0].innerHTML = valorDevuelto;
 }
 
+function borrarEstaTarea(evento) {
+    //target es la papelera (img)
+    //target.parentElement es su padre, el <li>
+    evento.target.parentElement.remove();
+}
 
 function gestionarTecla(evento) {
     // console.log(evento);
