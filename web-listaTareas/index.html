@@ -8,10 +8,11 @@
 </head>
 <body>
     <label for="inputTarea">Introduce Tarea:</label>
-    <input id="inputTarea" type="text">
+    <input id="inputTarea" type="text" onkeypress="gestionarTecla(event)">
     <button onclick="agregarTarea()">Añadir</button>
+    <button onclick="borrarTarea()">Borrar</button>
     <h1>Lista de Tareas:</h1>
-    <ul id="listaTareas"></ul>
+    <ol id="listaTareas"></ol>
     <script src="./app.js" type="application/javascript"></script>
 </body>
 </html>
