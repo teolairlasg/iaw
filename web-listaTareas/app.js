@@ -21,7 +21,7 @@ function agregarTarea() {
 }
 
 function editarEstaTarea(evento) {
-    let valorDevuelto = prompt("Escribe el nuevo valor:", event.target.parentElement.children[0].innerHTML);
+    let valorDevuelto = prompt("Escribe el nuevo valor:", evento.target.parentElement.children[0].innerHTML);
     if (valorDevuelto != null) {
         evento.target.parentElement.children[0].innerHTML = valorDevuelto;
     }
