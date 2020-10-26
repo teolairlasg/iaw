@@ -30,7 +30,21 @@ function editarEstaTarea(evento) {
 function borrarEstaTarea(evento) {
     //target es la papelera (img)
     //target.parentElement es su padre, el <li>
-    evento.target.parentElement.remove();
+    let nombreTarea = evento.target.parentElement.children[0].innerHTML;
+    let confirmacion = confirm(`¿Estás seguro de que quieres eliminar la tarea "${nombreTarea}"?`);
+    /*
+    //Otras formas de ponerlo. Comillas dobles (hay que escapar el caracter comillas poniendo la contrabarra delante) y 'sumar' las strings
+    
+    let confirmacion = confirm("¿Estás seguro de que quieres eliminar la tarea \"""+nombreTarea+"\"?");
+    
+    //Comillas simples, ya no tenemos que escapar el caracter " pero tenemos que sumar las cadenas.
+    
+    let confirmacion = confirm('¿Estás seguro de que quieres eliminar la tarea "'+nombreTarea+'"?');
+    
+    */
+    if (confirmacion == true) {
+        evento.target.parentElement.remove();
+    }
 }
 
 function gestionarTecla(evento) {
