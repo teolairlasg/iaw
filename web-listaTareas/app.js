@@ -8,8 +8,8 @@ function agregarTarea() {
         let lapiz = document.createElement("img");
         lapiz.src = "./img/lapiz.svg";
         papelera.src = "./img/trash.svg";
-        papelera.addEventListener("click",borrarEstaTarea);
-        lapiz.addEventListener("click",editarEstaTarea);
+        papelera.addEventListener("click", borrarEstaTarea);
+        lapiz.addEventListener("click", editarEstaTarea);
         liTexto.innerHTML = tarea.value;
         liTarea.appendChild(liTexto);
         liTarea.appendChild(lapiz);
@@ -21,8 +21,10 @@ function agregarTarea() {
 }
 
 function editarEstaTarea(evento) {
-    let valorDevuelto = prompt("Escribe el nuevo valor:",event.target.parentElement.children[0].innerHTML);
-    evento.target.parentElement.children[0].innerHTML = valorDevuelto;
+    let valorDevuelto = prompt("Escribe el nuevo valor:", event.target.parentElement.children[0].innerHTML);
+    if (valorDevuelto != null) {
+        evento.target.parentElement.children[0].innerHTML = valorDevuelto;
+    }
 }
 
 function borrarEstaTarea(evento) {
@@ -40,10 +42,10 @@ function gestionarTecla(evento) {
 
 function borrarTarea() {
     let valorDevuelto = prompt("Escribe el número de tarea que quieres borrar:");
-    if(valorDevuelto > 0 && valorDevuelto <= lista.childElementCount ){
-        lista.children[valorDevuelto-1].remove();
+    if (valorDevuelto > 0 && valorDevuelto <= lista.childElementCount) {
+        lista.children[valorDevuelto - 1].remove();
         // lista.removeChild(lista.children[valorDevuelto-1]);  
-    }else{
-      alert("Esa tarea no existe!");  
+    } else {
+        alert("Esa tarea no existe!");
     }
 }
