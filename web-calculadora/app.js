@@ -6,6 +6,8 @@ function imprimirSuma() {
     /*
     TODO rellenar el párrafo con id resultado sólo si el resultado no es null 
     */
+
+    
     document.getElementById("res").innerHTML= resultado;
     
 }
