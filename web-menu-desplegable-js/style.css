@@ -9,6 +9,10 @@
     padding: 5px;
 }
 
+#menu{
+    border-right: 1px solid black;
+}
+
 #listaMenu > li > img{
     width: 30px;
 }
@@ -16,14 +20,5 @@
 #listaMenu > li > span{
     line-height: 30px;
     vertical-align: top;
-}
-
-#listaMenu{
-    max-width: 20%;
-    border-right: 1px solid black;
-}
-
-#listaMenu > li{
-
-    
+    display: none;
 }
