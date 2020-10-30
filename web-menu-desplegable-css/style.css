@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#imgMenu{
+    width: 30px;
+}
+
+#listaMenu{
+    display: none;
+    width: 20%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}
+
+#menu{
+    display: inline;
+}
+
+#menu:hover > ul{
+    display: block;
+}
+
+#listaMenu > li {
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+
+#listaMenu > li:hover{
+    background-color: white;
+    color: black;
+}
