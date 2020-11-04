@@ -12,13 +12,10 @@ function mostrarOcultarMenu() {
 function mostrarMenu() {
     /* codigo para mostrar el menu */
     let menu = document.getElementById("listaMenu");
-    console.log(menu);
-    menu.children[0].children[1].style.display = "inline";
-    menu.children[1].children[1].style.display = "inline";
-    menu.children[2].children[1].style.display = "inline";
-    menu.children[3].children[1].style.display = "inline";
-
-
+    for (const liHijo of menu.children) {
+        liHijo.children[1].style.display = "inline";    
+    }
+    
     /* ---- */
     menuMostrado = true;
 }
@@ -26,12 +23,9 @@ function mostrarMenu() {
 function ocultarMenu() {
     /* codigo para ocultar el menu */
     let menu = document.getElementById("listaMenu");
-    menu.children[0].children[1].style.display = "none";
-    menu.children[1].children[1].style.display = "none";
-    menu.children[2].children[1].style.display = "none";
-    menu.children[3].children[1].style.display = "none";
-
-
+    for (const liHijo of menu.children) {
+        liHijo.children[1].style.display="none";
+    }
 
     /* ---- */
     menuMostrado = false;
