@@ -70,7 +70,6 @@ let nombresMujer = ["María", "Laura", "Eva", "Rosa", "Julia" ];
 //Solución con funciones flecha
 let nombresConTratamiento = nombresMujer.map(e => "Doña "+e );
 
-
 //Solución con funciones internas
 let nombresConTratamiento2 = nombresMujer.map(
     function (nombre) {
