@@ -165,24 +165,24 @@ function comparacion(x, y) {
 
 let coches = [
     {
-        marca: "Fiat",
-        modelo: "Uno",
-        anyo: 1990
+        "marca": "Fiat",
+        "modelo": "Uno",
+        "anyo": 1990
     },
     {
-        marca: "Fiat",
-        modelo: "Punto",
-        anyo: 1995
+        "marca": "Fiat",
+        "modelo": "Punto",
+        "anyo": 1995
     },
     {
-        marca: "Citroën",
-        modelo: "AX",
-        anyo: 1991
+        "marca": "Citroën",
+        "modelo": "AX",
+        "anyo": 1991
     },
     {
-        marca: "Volvo",
-        modelo: "S80",
-        anyo: 1989
+        "marca": "Volvo",
+        "modelo": "S80",
+        "anyo": 1989
     }
 ]
 
@@ -199,3 +199,7 @@ let cochesOrdenados = coches.sort(
 );
 
 console.log(cochesOrdenados);
+//otra manera mas sencilla, el orden de los parámetros nos dirá si de 
+//mayor a menor o de menor a mayor.
+cOrdenados2 = coches.sort((coche2,coche1) => coche1.anyo-coche2.anyo);
+console.log(cOrdenados2);
