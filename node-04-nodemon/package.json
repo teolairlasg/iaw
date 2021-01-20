@@ -1,0 +1,18 @@
+{
+  "name": "04-nodemon",
+  "version": "1.0.0",
+  "description": "Proyecto con nodemon para desarrollo",
+  "main": "app/index.js",
+  "scripts": {
+    "start": "node app/index.js",
+    "test": "nodemon app/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

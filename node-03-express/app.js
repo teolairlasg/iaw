@@ -1,18 +1,19 @@
 const express = require('express');
 const puerto = 3000;
 const web = express();
-
+const path = require('path');
+const rutaHTML = path.join(__dirname,'html');
 web.set('puerto', 3000);
 
 web.get('/',
     function (req, res) {
-        res.send('Hola mundo');
+        res.sendFile(path.join(rutaHTML,'index.html'));
     }
 );
 
 web.get('/adios',
     function (req, res) {
-        res.send('Adiós mundo');
+        res.sendFile(path.join(rutaHTML,'adios.html'));
     }
 );
 
