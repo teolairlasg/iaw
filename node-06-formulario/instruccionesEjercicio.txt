@@ -1,0 +1,9 @@
+Crear carpeta node-06-formulario
+entrar en la carpeta
+ejecutar npm init
+instalar nodemon como dependencia de desrrollo (con -D)
+instalar express como dependencia
+crear dentro una carpeta app
+crear dentro de app un fichero index.js
+crear dentro de app un fichero form.html
+devolver para la ruta / el fichero form.html desde el index.js
