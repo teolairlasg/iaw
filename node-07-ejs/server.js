@@ -12,13 +12,19 @@ app.get('/', function(req, res) {
     var mascots = [
         { name: 'Sammy', organization: "DigitalOcean", birth_year: 2012},
         { name: 'Tux', organization: "Linux", birth_year: 1996},
-        { name: 'Moby Dock', organization: "Docker", birth_year: 2013}
+        { name: 'Moby Dock', organization: "Docker", birth_year: 2013},
+        { name: 'Sarry', organization: "CB Peñas Huesca", birth_year: 2005}
     ];
-    var tagline = "No programming concept is complete without a cute animal mascot.";
 
+    let teletubbies = ["Tinky winki", "Dipsi", "lala", "po"];
+
+    var tagline = "No programming concept is complete without a cute animal mascot.";
+    let nombre = "Teo"
     res.render('pages/index', {
         mascots: mascots,
-        tagline: tagline
+        tagline: tagline,
+        nombre: nombre,
+        lista: teletubbies
     });
 });
 
