@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+ <link rel="stylesheet" href="style.css">
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Document</title>
@@ -8,5 +9,10 @@
 <body>
  <%- include('../parciales/cabecera') %>
  <%= texto %>
+ <p>Tu ip es: <%= ip %></p>
+ <p>Tu protocolo es: <%= protocolo %></p>
+ <p>Tu ruta de acceso es: <%= ruta %></p>
+ <p>Tu URL BASE es: <%= urlBase %></p>
+ <p>¿Conexión segura?: <%= seguro %></p>
 </body>
 </html>
