@@ -1,0 +1,12 @@
+Crear un servidor que devuelva a una petición a / el siguiente objeto en json
+{ 
+    lista: ["hola", "adios"]
+}
+
+Crear un cliente que haga una petición fetch al servidor
+
+Y que la lista la añada al final del body como un ul esto es lo que tiene que aparecer en el inspector, pero lo tiene que añadir javascript
+<ul>
+ <li>hola</li>
+ <li>adios</li>
+</ul>
