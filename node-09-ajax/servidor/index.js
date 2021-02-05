@@ -7,7 +7,8 @@ app.get('/', function (req,res) {
         "nombre": "Alumno"
     }
     // Permitir conexiones desde otros origenes.
-    res.header("Access-Control-Allow-Origin", "*");
+    //Necesario para xhttp response
+    //res.header("Access-Control-Allow-Origin", "*");
     res.json(respuesta);
 })
 
