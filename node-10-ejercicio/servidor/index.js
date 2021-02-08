@@ -4,11 +4,11 @@ const puerto = 3000;
 
 app.get('/', function (req,res) {
     let respuesta = {
-        "lista": ["Alumno", "adios"]
+        "lista": ["Hola", "adios","alumno","mundo"]
     }
     // Permitir conexiones desde otros origenes.
     //Necesario para xhttp response
-    //res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Origin", "*");
     res.json(respuesta);
 })
 
