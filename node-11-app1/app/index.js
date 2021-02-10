@@ -32,7 +32,6 @@ server.get('/api/:propiedad',function (req, res) {
     }else{
         res.send("Error!!!");
     }
-
 })
 
 
