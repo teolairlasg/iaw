@@ -7,6 +7,12 @@ body{
     height: 95vh;
 }
 
+aside ul{
+    list-style: none;
+    padding:10px;
+    margin:0;
+}
+
 header{
     grid-area: h;
     border-style: solid;

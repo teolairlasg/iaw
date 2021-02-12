@@ -1,6 +1,10 @@
 <aside>Aside a
     <ul>
-        <li><%= items[0] %></li>
+        <% for(item of items2 ) { %>
+        <li>
+            <a href="<%= item %>"><%= item %></a>
+        </li>
+        <% } %>
     </ul>
 
 </aside>
