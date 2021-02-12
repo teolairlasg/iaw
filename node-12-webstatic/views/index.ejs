@@ -3,8 +3,8 @@
 <%- include('head', { titulo: 'Inicio EJS'}) %>
 <body>
     <%- include('header') %>
-    <%- include('aside', {items: items}) %>
-    <%- include('main') %>
+    <%- include('aside', {items2: itemsAside}) %>
+    <%- include(`mains/${pagina}`) %>
     <%- include('footer') %>
 </body>
 </html>
