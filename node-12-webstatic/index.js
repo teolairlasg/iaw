@@ -8,7 +8,7 @@ app.use(express.static(rutaPublic));
 app.set('view engine', 'ejs');
 
 let datos = {
-    'itemsAside': ['main', 'pagina2', 'pagina3'],
+    'itemsAside': ['main', 'pagina2', 'pagina3', 'pagina4'],
     'pagina': 'main'
 };
 
