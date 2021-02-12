@@ -4,7 +4,7 @@
 <body>
     <%- include('header') %>
     <%- include('aside', {items2: itemsAside}) %>
-    <%- include(pagina) %>
+    <%- include(`mains/${pagina}`) %>
     <%- include('footer') %>
 </body>
 </html>
