@@ -12,15 +12,17 @@
     <table>
         <thead>
             <tr>
-                <th>Título</th>
-                <th>Duración</th>
+                <% for( encabezado in datosTabla[0] ) { %>
+                    <th> <%= encabezado %> </th>
+                <% } %>
             </tr>
         </thead>
         <tbody>
             <% for(fila of datosTabla){ %>
             <tr>
-                <td><%=fila.titulo %></td>
-                <td><%=fila.duracion%></td>
+                <% for( campo in fila ) { %>
+                    <td> <%= fila[campo] %> </td>
+                <% } %>
             </tr>
             <% } %>
         </tbody>
