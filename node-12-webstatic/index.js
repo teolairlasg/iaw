@@ -8,24 +8,29 @@ app.use(express.static(rutaPublic));
 app.set('view engine', 'ejs');
 
 let datos = {
-    'itemsAside': ['main', 'pagina2', 'pagina3', 'pagina4'],
-    'pagina': 'main'
+    'itemsAside': ['main', 'pagina2', 'pagina3', 'pagina4']
 };
 
-app.get('/', function (req, res) {
-    datos.pagina='main';
-    res.render('index',datos);
+app.get('/', function(req, res) {
+    res.render('index', {
+        ...datos,
+        pagina: 'main'
+    });
 })
 
-app.get('/:pag',function (req,res) {
+app.get('/:pag', function(req, res) {
     //indexOf me devuelve el índice de un elemento
     //dentro del array. Si no existe devuelve -1
-    if(datos.itemsAside.indexOf(req.params.pag) == -1 ){
-        datos.pagina='error';
-    }else{
-        datos.pagina=req.params.pag;
+    let main
+    if (datos.itemsAside.indexOf(req.params.pag) == -1) {
+        main = 'error';
+    } else {
+        main = req.params.pag;
     }
-   res.render('index', datos);
+    res.render('index', {
+        ...datos,
+        pagina: main
+    });
 });
 
 app.listen(puerto, iniciaServidor());
