@@ -10,6 +10,13 @@ const mariadb = require('mariadb');
 // el código. Hay que asegurarse de que no subimos
 // el fichero .env al repositorio
 dotenv.config();
+app.set('view engine','ejs');
+//Por defecto views tiene que estar en la carpeta de
+// proyecto
+let dirViews = path.join(__dirname, 'views');
+app.set('views',dirViews);
+let dirPublic= path.join(__dirname, 'public');
+app.use(express.static(dirPublic))
 const datosBD = {
     //Dirección del servidor
     host: process.env.BD_HOST,
@@ -28,8 +35,8 @@ app.get('/', function (req, res) {
             console.log("Conectado!", conexion.threadId);
             conexion.query("SELECT * FROM Pelicula")
                 .then(filas => {
-                    console.log(filas.length);
-                    res.send(filas[0]);
+                    console.log(filas.meta);
+                    res.render('index', {datosTabla: filas} );
                 })
                 .catch(error => {
                     console.log("Error en la consulta", error);
