@@ -7,11 +7,12 @@ let rutaPublic = path.join(__dirname, 'public');
 app.use(express.static(rutaPublic));
 app.set('view engine', 'ejs');
 
-let datos = {
+const datos = {
     'itemsAside': ['main', 'pagina2', 'pagina3', 'pagina4']
 };
 
 app.get('/', function(req, res) {
+
     res.render('index', {
         ...datos,
         pagina: 'main'
