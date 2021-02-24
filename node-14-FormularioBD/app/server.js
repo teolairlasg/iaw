@@ -46,14 +46,14 @@ app.post('/guardarPeli', function (req, res) {
         });
 });
 
-app.post('/guardarPeli2', function (req, res) {
+app.post('/guardarPeli2', async function(req, res) {
     console.log(req.body);
     //Recuperar los datos enviados
     const titulo = req.body.nTitulo;
     const duracion = req.body.nDuracion;
     //Conectar con la base de datos
     try {
-        const resultado = insertarPelicula(titulo,duracion);
+        const resultado = await insertarPelicula(titulo,duracion);
         console.log(resultado);
         res.send("ok");
     } catch (error) {
