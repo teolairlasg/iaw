@@ -53,8 +53,9 @@ app.post('/guardarPeli2', function (req, res) {
     const duracion = req.body.nDuracion;
     //Conectar con la base de datos
     try {
-        const resultado = await insertarPelicula(titulo,duracion);
+        const resultado = insertarPelicula(titulo,duracion);
         console.log(resultado);
+        res.send("ok");
     } catch (error) {
         imprimirError(error);
     }
