@@ -1,0 +1,133 @@
+/* Todas las versiones */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    height: 50px;
+    padding: 10px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    background-color: lightcoral;
+}
+
+main {
+    /* 
+    Calculo el alto visible menos la 
+    altura del header y menos la altura del nav
+    */
+    height: calc( 100vh - 50px - 50px);
+    overflow: auto;
+    padding: 10px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    background-color: lightblue;
+}
+
+section {
+    border-style: solid;
+    border-width: 1px;
+    padding: 10px;
+    background-color: white;
+}
+
+nav {
+    height: 50px;
+    background-color: lightgoldenrodyellow;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+/* Todos los enlaces contenidos en el nav */
+
+nav a {
+    background-color: yellow;
+    padding: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#headerEscritorio {
+    display: none;
+}
+
+footer {
+    display: none;
+}
+
+
+/* Versión de escritorio */
+
+@media ( min-width: 481px) {
+    body {
+        display: grid;
+        height: 100vh;
+        grid-template-areas: "encabezado" "botones" "general" "pie";
+    }
+    #headerEscritorio {
+        display: inline;
+    }
+    #headerMovil {
+        display: none;
+    }
+    header {
+        grid-area: encabezado;
+        height: auto;
+    }
+    nav {
+        grid-area: botones;
+        height: auto;
+        padding: 10px;
+    }
+    main {
+        grid-area: general;
+        height: auto;
+        /* 
+        Calculo el alto visible menos la 
+        altura del header y menos la altura del nav, menos
+        la altura del footer
+        */
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding-bottom: 10px;
+        gap: 10px;
+    }
+    footer {
+        height: auto;
+        grid-area: pie;
+        display: block;
+        text-align: right;
+        padding: 10px;
+        background-color: grey;
+        color: white;
+    }
+    main>h1 {
+        grid-column-start: 1;
+        grid-column-end: -1;
+    }
+    section {
+        display: inline-block;
+        vertical-align: top;
+        /* height: calc(100% - 40px); */
+        overflow-y: auto;
+        flex-grow: 0;
+    }
+    section p {
+        text-align: left;
+    }
+    section:nth-of-type(1) {
+        margin-left: 0px;
+    }
+}

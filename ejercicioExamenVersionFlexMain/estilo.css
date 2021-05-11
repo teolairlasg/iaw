@@ -1,0 +1,122 @@
+/* Todas las versiones */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    height: 50px;
+    padding: 10px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    background-color: lightcoral;
+}
+
+main {
+    /* 
+    Calculo el alto visible menos la 
+    altura del header y menos la altura del nav
+    */
+    height: calc( 100vh - 50px - 50px);
+    overflow: auto;
+    padding: 10px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    background-color: lightblue;
+}
+
+section {
+    border-style: solid;
+    border-width: 1px;
+    padding: 10px;
+    background-color: white;
+}
+
+nav {
+    height: 50px;
+    background-color: lightgoldenrodyellow;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+/* Todos los enlaces contenidos en el nav */
+
+nav a {
+    background-color: yellow;
+    padding: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#headerEscritorio {
+    display: none;
+}
+
+footer {
+    display: none;
+}
+
+
+/* Versión de escritorio */
+
+@media ( min-width: 481px) {
+    #headerEscritorio {
+        display: inline;
+    }
+    #headerMovil {
+        display: none;
+    }
+    main {
+        /* 
+        Calculo el alto visible menos la 
+        altura del header y menos la altura del nav, menos
+        la altura del footer
+        */
+        height: calc( 100vh - 50px - 50px - 50px);
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    main>h1 {
+        flex-basis: 100%;
+    }
+    footer {
+        display: block;
+        height: 50px;
+        text-align: right;
+        padding: 10px;
+        background-color: grey;
+        color: white;
+    }
+    nav {
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+    header {
+        margin-top: 50px;
+    }
+    section {
+        display: inline-block;
+        vertical-align: top;
+        height: calc(100% - 40px);
+        overflow-y: auto;
+        flex-grow: 1;
+    }
+    section p {
+        text-align: left;
+    }
+    section:nth-of-type(1) {
+        margin-right: 10px;
+    }
+}
