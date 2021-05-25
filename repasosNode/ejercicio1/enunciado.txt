@@ -1,0 +1,17 @@
+-Crear y configurar un proyecto de node con npm init.
+
+-Debe tener nodemon como dependencia de desarrollo.
+
+-Debe tener express como dependencia.
+
+-El servidor deberá devolver un fichero index.html
+en la ruta raíz. El fichero está dentro de la carpeta html en el servidor.
+
+-El index.html deberá estar enlazado con el style.css dentro de la carpeta css. El servidor devolverá el 
+fichero style.css mediante la ruta /style
+
+-El servidor devolverá la imagen de la carpeta mediante la ruta /img1
+
+-Añadid contenido al index.html para que se vea que funcionan todas las rutas.
+
+
