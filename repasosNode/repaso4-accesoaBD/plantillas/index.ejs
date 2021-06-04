@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>plantilla index</title>
+</head>
+
+<body>
+ <h1>Acceso a BD</h1>
+
+ <% for (pelicula of datosTabla) { %>
+  <p>
+   <%= pelicula['titulo'] %><br/>
+   <%= pelicula['duracion'] %> minutos
+ </p>
+
+ <% } %>
+ <a href="/guardarDatos">Guardar Datos</a>
+</body>
+
+</html>

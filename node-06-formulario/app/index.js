@@ -1,9 +1,13 @@
 const express = require('express');
 const path = require('path');
+const fs = require('fs');
 //para usar body-parser
 const bodyParser = require('body-parser');
 const app = express();
 app.set('puerto',3000);
+
+let arrayRecibidos = [];
+let ficheroRecibidos = path.join(__dirname,'recibidos.json');
 
 app.use(bodyParser.urlencoded({ extended: false}));
 
@@ -28,8 +32,14 @@ app.post('/form', function (req,res) {
 //con body-parser
   let recibido = req.body;
   console.log(`El usuario ha introducido ${recibido.vName} en el campo Nombre y ${recibido.vSurname} en el campo Apellido`);
-  res.sendFile(path.join(__dirname,"form.html"));
 
+  let persona= {
+    nombre: recibido.vName,
+    apellido: recibido.vSurname
+  };
+  arrayRecibidos.push(persona);
+  fs.writeFileSync(ficheroRecibidos,JSON.stringify(arrayRecibidos));
+  res.redirect('/');
 })
 
 
